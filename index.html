@@ -1,9 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Test</title>
+<title>Jajan Mobile</title>
+<script src="jquery.mobile-1.2.0.min.js"></script>
+<link href="jquery.mobile-1.2.0.min.css" rel="stylesheet" />
+<link href="jquery.mobile.theme-1.2.0.min.css" rel="stylesheet" />
+<link href="jquery.mobile.structure-1.2.0.min.css" rel="stylesheet" />
 </head>
 <body>
-<h1>Hello there</h1>
+<!-- Home -->
+<div id="home" data-role="page" data-theme="b">
+    <div data-role="header">
+    </div>
+    <div data-role="content">
+        <img src="~/Content/images/Logo1.png">
+    </div>
+    <a data-role="button" data-transition="slide" href="#map" data-icon="search" data-iconpos="left">Lokasi Saya
+    </a>
+    <a data-role="button" data-transition="slide" href="#daftarkantin" data-icon="grid" data-iconpos="left">Daftar Kantin
+    </a>
+</div>
+
+<div data-role="page" id="map" data-theme="b">
+    <div data-role="header">
+    </div>
+    <div data-role="content">
+        <div>
+            <a href="#home"><img src="~/Content/images/Logo1.png"></a>
+        </div>
+        <a href="#detailkantin" data-transition="slide"><img style="background-size:100%" src="~/Content/images/map.png"></a>
+    </div>
+
+</div>
+
+<div data-role="page" id="daftarkantin" data-theme="b">
+    <div data-role="header">
+    </div>
+    <div data-role="content">
+         <div>
+            <a href="#home"><img src="~/Content/images/Logo1.png"></a>
+        </div>
+        <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+                <label for="searchinput1">
+                </label>
+                <input name="" id="searchinput1" placeholder="" value="" type="search">
+            </fieldset>
+        </div>
+        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+            <li data-theme="c">
+                <a href="#detailkantin" data-transition="slide">Kantin Barat Laut (100m)
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#detailkantin" data-transition="slide">Kantin GKU Barat (300m)
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#detailkantin" data-transition="slide">Kantin Borju (400m)
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#detailkantin" data-transition="slide">Kantin Biologi (500m)
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#detailkantin" data-transition="slide">Kantin Bang Ed (600m)
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#detailkantin" data-transition="slide">Kantin Barak (650m)
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div data-role="page" id="detailkantin" data-theme="b">
+    <div data-role="header">
+    </div>
+    <div data-role="content">
+        <div>
+            <a href="#home"><img src="~/Content/images/Logo1.png"></a>
+        </div>
+        <h2>
+            Kantin Barat Laut
+        </h2>
+        <div data-role="collapsible-set">
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>
+                    Deskripsi
+                </h3>
+                Kantin Barat Laut menyediakan menu prasmanan dengan masakan rumahan khas Indonesia. Harga berkisar...
+            </div>
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>
+                    Daftar Menu
+                </h3>
+            </div>
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>
+                    Kontak
+                </h3>
+                
+            </div>
+        </div>
+        <a data-role="button" href="#map" data-icon="arrow-r" data-iconpos="left" data-transition="slide">
+                    Get Direction
+                </a>
+    </div>
+
+</div>
+
 </body>
 </html>
