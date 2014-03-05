@@ -2,11 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Prista Ditto</title>
+  <title>Prista dan Ditto</title>
+<style>
+.spinner {
+  margin: 200px auto;
+  width: 64px;
+  height: 64px;
+  position: relative;
+}
 
+.cube1, .cube2 {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: cubemove 1.8s infinite ease-in-out;
+  animation: cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+@-webkit-keyframes cubemove {
+  25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+  50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+  75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+  100% { -webkit-transform: rotate(-360deg) }
+}
+
+@keyframes cubemove {
+  25% { 
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  } 50% { 
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+  } 50.1% { 
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  } 75% { 
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  } 100% { 
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+</style>
 </head>
-<body style="background-color:#D1EFF9">
-  <div style="position:absolute;left:0;right:0;margin:0 auto;text-align:center;width:1000px;height:4800px;background:url('background.gif') no-repeat bottom center;">&nbsp;
+<body style="background-color:#CEEEF8">  
+
+ <div style="position:absolute;left:0;right:0;margin:0 auto;text-align:center;width:800px;height:3840px;background:url('background2.gif') no-repeat bottom center;">&nbsp;
 </div>
+<script type="text/javascript">
+window.scrollTo(0,4800);
+</script>
 </body>
 </html>
